@@ -1,0 +1,14 @@
+{
+  "name": "slidev-deck",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export --format pdf --with-clicks",
+    "validate": "node ../theme/bin/validate-manifest.mjs ."
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.0.0",
+    "slidev-theme-cnc-editorial": "file:../theme"
+  }
+}

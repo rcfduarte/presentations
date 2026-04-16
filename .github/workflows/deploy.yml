@@ -1,0 +1,43 @@
+name: Deploy decks to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: pnpm }
+      - name: Find changed decks
+        id: decks
+        run: |
+          # Build all decks that have a slides.md and are not _template
+          DECKS=$(find . -maxdepth 2 -name 'slides.md' -not -path './_template/*' | xargs -n1 dirname | sort -u)
+          echo "decks<<EOF" >> $GITHUB_OUTPUT
+          echo "$DECKS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      - name: Build each deck
+        run: |
+          mkdir -p dist
+          for deck in ${{ steps.decks.outputs.decks }}; do
+            slug=$(basename "$deck")
+            echo "Building $slug"
+            cd "$deck"
+            pnpm install --frozen-lockfile || pnpm install
+            pnpm exec slidev build --base "/presentations/$slug/" --out "../dist/$slug"
+            cd - > /dev/null
+          done
+          cp index.html dist/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: dist }
+      - uses: actions/deploy-pages@v4
