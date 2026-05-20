@@ -1,0 +1,6 @@
+node_modules/
+dist/
+exports/
+*.pdf
+slides-export.pdf
+slides.com-deck-id.txt

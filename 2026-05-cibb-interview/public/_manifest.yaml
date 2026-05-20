@@ -1,0 +1,102 @@
+# Figure provenance for the CiBB interview deck (2026-05-25)
+# Generated 2026-05-20 during deck production
+
+deck: 2026-05-cibb-interview
+spec: Assets/claude/docs/specs/2026-05-20-cibb-interview-deck-design.md
+plan: Assets/claude/docs/plans/2026-05-20-cibb-interview-deck-implementation.md
+
+slide2:
+  parallel-architecture:
+    file: figures/slide2-parallel-architecture.svg
+    source: "illustrator agent (svgwrite-generated, programmatic)"
+    date: 2026-05-20
+    brief: "Two-tissue parallel-architecture: cortical microcircuit + pancreatic islet, shared Glu+SST+CREB callout"
+    viewBox: 1400x700
+  kinetics-traces:
+    file: figures/slide2-kinetics-traces.svg
+    source: "illustrator agent (schematic; no real source data available in vault — Silberberg-Markram 2007 + Hill 2024 PDFs not present)"
+    date: 2026-05-20
+    brief: "Two-panel kinetics schematic: cortex ~10 ms vs islets ~30 s"
+    viewBox: 1400x500
+
+slide3:
+  quaresima2022-tripod-panel:
+    file: figures/slide3-quaresima2022-tripod-panel.png
+    source: "Quaresima et al. 2022 (J Physiol), Tripod neuron paper — extracted figure panel"
+    pdf: "Career & Funding/applications/CiBB_PostDoc/submission-docs/publications/selected/Quaresima_2022_The-Tripod-neuron-A-minimal-structural.pdf"
+    date: 2026-05-20
+  quaresima2025-updown-panel:
+    file: figures/slide3-quaresima2025-updown-panel.png
+    source: "Quaresima et al. 2025 — Nonlinear dendritic integration / Up-Down dynamics"
+    pdf: "Career & Funding/applications/CiBB_PostDoc/submission-docs/publications/selected/Quaresima_2025_Nonlinear-dendritic-integration-supports-up-down.pdf"
+    date: 2026-05-20
+  korcsak2024-panel:
+    file: figures/slide3-korcsak2024-panel.png
+    source: "Korcsak-Gorzo et al. 2024 (Neuromethods, invited book chapter) — Phenomenological synaptic dynamics"
+    pdf: "Career & Funding/applications/CiBB_PostDoc/submission-docs/publications/selected/Korcsak_2024_Phenomenological-modeling-of-diverse-and.pdf"
+    date: 2026-05-20
+  duarte-morrison2019-panel:
+    file: figures/slide3-duarte-morrison2019-panel.png
+    source: "Duarte & Morrison 2019 (PLoS Comput Biol) — Circuit plasticity framework"
+    pdf: "Media/Documents/papers/journal.pcbi.1006781.pdf"
+    date: 2026-05-20
+
+slide4:
+  bcm-landscape:
+    file: figures/slide4-bcm-landscape.png
+    source: "SP3 fig22 (Research/compartmentalized-learning/sub-projects/sp3-hetsyn-ei)"
+    date: 2026-05-13
+  spillover:
+    file: figures/slide4-spillover.png
+    source: "SP3 fig_t4 (Research/compartmentalized-learning/sub-projects/sp3-hetsyn-ei/agent-outputs)"
+    date: 2026-05-19
+  cns2026-hetsyn:
+    file: figures/slide4-cns2026-hetsyn.svg
+    source: "CNS-2026 abstract figure (Research/compartmentalized-learning/publications/abstracts_cns)"
+    date: 2026-03-09
+  chemoarchitecture-axis:
+    file: figures/slide4-chemoarchitecture-axis.svg
+    source: "illustrator agent (svgwrite-generated) — concept from chemoarchitecture/axes-of-neurotransmission/overview.md"
+    date: 2026-05-20
+    viewBox: 700x450
+
+slide5:
+  population-schematic:
+    file: figures/slide5-population-schematic.svg
+    source: "illustrator agent (svgwrite-generated, programmatic)"
+    date: 2026-05-20
+    brief: "Side-by-side population schematic: ~32-cell islet rosette (α/β/δ) vs cortical microcircuit (P+SST)"
+    viewBox: 1400x600
+
+slide6:
+  objectives-grid:
+    file: figures/slide6-objectives-grid.svg
+    source: "illustrator agent (svgwrite-generated, programmatic)"
+    date: 2026-05-20
+    brief: "Four-quadrant icon grid: Obj 1 receptor models / Obj 2 feedback brake / Obj 3 CREB plasticity / Obj 4 drug screening"
+    viewBox: 1400x800
+
+slide7:
+  drug-screening-pipeline:
+    file: figures/slide7-drug-screening-pipeline.svg
+    source: "illustrator agent (svgwrite-generated, programmatic)"
+    date: 2026-05-20
+    brief: "Horizontal pipeline: LINCS L1000 → biophysical filter → ranked shortlist → ex-vivo validation. Worked example: GluN2B antagonist"
+    viewBox: 1600x700
+
+slide8:
+  bidirectional-flow:
+    file: figures/slide8-bidirectional-flow.svg
+    source: "illustrator agent (svgwrite-generated, programmatic)"
+    date: 2026-05-20
+    brief: "Three-node bidirectional flow: cortical Glu/GABA ↔ islet substrate ↔ translational branch"
+    viewBox: 1400x500
+
+logos:
+  cnc: { file: logos/cnc.svg, source: "Media/Pictures/collection/logos/CNC/logo.svg" }
+  cibb: { file: logos/cibb.svg, source: "Media/Pictures/collection/logos/CNC/logo-CiBB.svg" }
+  uc: { file: logos/uc.png, source: "Media/Pictures/collection/logos/CNC/UC_H_FundoClaro-negro.png" }
+  fct: { file: logos/fct.png, source: "Media/Pictures/collection/logos/FCT/2022_Logotipo_FCT_vetorial/RGB/2022_FCT_Logo_A_horizontal_preto.png" }
+  mia-portugal:
+    fallback: text
+    note: "MIA-Portugal logo not available locally and mia-portugal.pt did not respond. Using text label 'MIA-Portugal' on title + acknowledgements slides."

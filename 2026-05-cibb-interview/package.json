@@ -1,0 +1,16 @@
+{
+  "name": "cibb-interview-2026-05",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export --format pdf --with-clicks"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.0.0",
+    "slidev-theme-cnc-v2": "link:../../../../../Assets/slidev-themes/cnc-v2"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.59.1"
+  }
+}
