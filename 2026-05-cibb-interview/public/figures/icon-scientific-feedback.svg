@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+  <defs>
+    <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2A5FAC"/>
+    </marker>
+    <marker id="tbar-wine" markerWidth="10" markerHeight="14" refX="3" refY="7" orient="auto">
+      <rect x="2" y="0" width="3" height="14" fill="#7A2A3D"/>
+    </marker>
+  </defs>
+  <!-- Left cell (α / pyramidal) -->
+  <circle cx="70" cy="120" r="56" fill="#E8EFF9" stroke="#1a2130" stroke-width="2.5"/>
+  <text x="70" y="118" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1a2130">α / Pyr</text>
+  <text x="70" y="140" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-style="italic" fill="#5a6478">excitatory</text>
+  <!-- Right cell (δ / SST+) -->
+  <circle cx="290" cy="120" r="56" fill="#FBE8EA" stroke="#1a2130" stroke-width="2.5"/>
+  <text x="290" y="118" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1a2130">δ / SST⁺</text>
+  <text x="290" y="140" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-style="italic" fill="#5a6478">inhibitory</text>
+  <!-- Glu arrow (excitatory, blue, top) -->
+  <path d="M 124 90 C 165 56, 200 56, 240 90" fill="none" stroke="#2A5FAC" stroke-width="4" marker-end="url(#arr-blue)"/>
+  <text x="180" y="52" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#2A5FAC">Glu</text>
+  <!-- SST/GABA arrow (inhibitory, wine, bottom) -->
+  <path d="M 240 150 C 200 184, 165 184, 124 150" fill="none" stroke="#7A2A3D" stroke-width="4" marker-end="url(#tbar-wine)"/>
+  <text x="180" y="204" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#7A2A3D">SST / GABA</text>
+  <!-- Timescale ticks -->
+  <text x="70" y="225" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#5a6478" font-style="italic">cortex ~ ms</text>
+  <text x="290" y="225" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#5a6478" font-style="italic">islet ~ s–min</text>
+</svg>
